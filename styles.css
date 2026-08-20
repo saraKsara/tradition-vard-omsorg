@@ -1,0 +1,20 @@
+@import url("https://tradition-website.vercel.app/_next/static/css/index.CKGNqmPd.css");
+
+/* Lokal export från den nuvarande Vercel-versionen.
+   Ursprunglig stylesheet laddas från den befintliga deploymenten
+   för att behålla utseendet exakt. */
+
+.founder-collage .collage-place.collage-care {
+  display: block;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.collage-care img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}

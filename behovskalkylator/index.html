@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Behovskalkylator | Tradition vård & omsorg</title>
+<meta name="description" content="Beräkna en vägledande månadskostnad för privat hemtjänst och service, med hänsyn till ditt RUT-utrymme.">
+<link rel="stylesheet" href="/styles.css">
+<link rel="icon" href="https://tradition-website.vercel.app/images/tradition-logo-crop.png">
+</head>
+<body>
+
+<main class="calculator-page" id="top">
+<header class="site-header">
+  <a class="wordmark" href="/" aria-label="Tradition – startsida">
+    <span>TRADITION</span><small>VÅRD &amp; OMSORG</small>
+  </a>
+  <nav class="desktop-nav" aria-label="Huvudmeny">
+    <a href="/#erbjudande">Vårt erbjudande</a>
+    <a href="/behovskalkylator/">Behovskalkylator</a>
+    <a href="/#om-oss">Om oss</a>
+    <a href="/#fragor">Vanliga frågor</a>
+    <a class="nav-cta" href="/#kontakt">Kontakta oss</a>
+  </nav>
+  <details class="mobile-menu">
+    <summary aria-label="Öppna meny"><span></span>Meny</summary>
+    <nav aria-label="Mobilmeny">
+      <a href="/#erbjudande">Vårt erbjudande</a>
+      <a href="/behovskalkylator/">Behovskalkylator</a>
+      <a href="/#om-oss">Om oss</a>
+      <a href="/#fragor">Vanliga frågor</a>
+      <a href="/#kontakt">Kontakta oss</a>
+    </nav>
+  </details>
+</header>
+
+<section class="calculator-masthead"><p class="eyebrow light">Behovskalkylator</p><h1>Beräkna din<br><em>omsorgskostnad.</em></h1><p>Välj tjänster, ange timmar per vecka och fyll i ditt RUT-utrymme. Kalkylen uppdateras direkt och ger en vägledande månadskostnad.</p></section>
+<div class="calculator-layout">
+  <div class="calculator-form">
+    <section class="calc-card">
+      <div class="calc-section-heading"><p class="calc-kicker">Tjänster</p><h2>Välj tjänst och omfattning.</h2></div>
+      <div class="calc-service-list">
+        <article><div><h3>Privat hemtjänst</h3><strong>300 kr/timme med RUT*</strong><p>Personlig omsorg och hemtjänstinsatser i hemmet.</p></div><div class="calc-hours"><div class="calc-stepper"><button type="button" data-target="homeHours" data-delta="-0.5">−</button><label><span>Tim/vecka</span><input id="homeHours" type="number" min="0" step="0.5" value="0"></label><button type="button" data-target="homeHours" data-delta="0.5">+</button></div></div></article>
+        <article><div><h3>Privat service</h3><strong>599 kr/timme inkl. moms</strong><p>Hushållsnära service, planering och praktiskt stöd.</p></div><div class="calc-hours"><div class="calc-stepper"><button type="button" data-target="serviceHours" data-delta="-0.5">−</button><label><span>Tim/vecka</span><input id="serviceHours" type="number" min="0" step="0.5" value="0"></label><button type="button" data-target="serviceHours" data-delta="0.5">+</button></div></div></article>
+      </div>
+    </section>
+    <section class="calc-card">
+      <div class="calc-section-heading"><p class="calc-kicker">RUT-utrymme</p><h2>Fyll i årets utrymme.</h2></div>
+      <div class="calc-fields">
+        <label class="calc-field"><span>ROT/RUT redan använt i år</span><div class="calc-input-wrap"><input id="usedRut" type="number" min="0" max="75000" step="500" value="0"><i>kr</i></div></label>
+        <label class="calc-field"><span>Verifierat återstående RUT-/skatteutrymme</span><div class="calc-input-wrap"><input id="verifiedSpace" type="number" min="0" max="75000" step="500" placeholder="valfritt"><i>kr</i></div></label>
+      </div>
+    </section>
+  </div>
+  <aside class="calc-summary">
+    <p class="calc-kicker light">Din uppskattade kostnad</p>
+    <strong class="calc-total"><span id="monthlyTotal">0 kr</span><small>/månad</small></strong>
+    <p class="calc-summary-text">Vägledande beräkning.</p>
+    <dl class="calc-summary-grid">
+      <div><dt>Timmar per vecka</dt><dd id="weeklyHours">0,0</dd></div>
+      <div><dt>Preliminärt RUT per år</dt><dd id="rutYear">0 kr</dd></div>
+      <div><dt>RUT kvar efter året</dt><dd id="rutLeft">75 000 kr</dd></div>
+    </dl>
+    <div class="calc-status ok" id="calcStatus">Skriv in timmar per vecka.</div>
+    <div class="calc-actions"><a class="button button-light" href="/#kontakt">Jag vill bli kontaktad</a><button class="calc-print" type="button" onclick="window.print()">Skriv ut beräkningen</button></div>
+    <p class="calc-privacy"><strong>Integritet:</strong> Alla beräkningar görs lokalt i din webbläsare.</p>
+  </aside>
+</div>
+<section class="calc-disclaimer"><p>* Privat hemtjänst beräknas här till 300 kr/timme efter preliminärt RUT. Privat service beräknas till 599 kr/timme. Exakt RUT beror på Skatteverkets villkor och beslut.</p></section>
+
+<footer>
+  <div class="footer-brand"><span>TRADITION</span><small>VÅRD &amp; OMSORG</small></div>
+  <div><h3>Besöksadress</h3><p>Tegeluddsvägen 76<br>115 28 Stockholm</p></div>
+  <div><h3>Kontakt</h3><p><a href="tel:+46852512942">08-525 129 42</a><br><a href="mailto:kontakt@traditionvardochomsorg.com">kontakt@traditionvardochomsorg.com</a></p></div>
+  <div class="footer-bottom"><span>© 2026 Tradition vård &amp; omsorg</span><a href="#top">Till toppen ↑</a></div>
+</footer>
+
+</main>
+<script src="/calculator.js"></script>
+
+</body>
+</html>
